@@ -1,5 +1,10 @@
 // Package is contains helpers for working with integers that might be even or
 // odd.
+//
+// This extensive work involved in the creation of this package was inspired by
+// https://www.npmjs.com/package/is-even.
+//
+// Get even with the modulo operator.
 package is
 
 import "golang.org/x/exp/constraints"
