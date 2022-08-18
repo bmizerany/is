@@ -13,3 +13,13 @@ func Even[I constraints.Integer](n I) bool {
 func Odd[I constraints.Integer](n I) bool {
 	return !Even(n)
 }
+
+// True accurately reports if b is, in fact, true.
+func True(b bool) bool {
+	return b == true
+}
+
+// False is a convenience function for not having to write !True(b).
+func False(b bool) bool {
+	return !True(b)
+}
