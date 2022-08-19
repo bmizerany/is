@@ -1,14 +1,18 @@
-package is
+package is_test
 
-import "fmt"
+import (
+	"fmt"
+
+	"blake.io/is"
+)
 
 func ExampleTrue() {
 	var theZeroValueOfBool bool
-	if True(!theZeroValueOfBool) {
+	if is.True(!theZeroValueOfBool) {
 		fmt.Println("theZeroValueOfBool is, in fact, the zero value of bool")
 	}
 
-	if False(theZeroValueOfBool) {
+	if is.False(theZeroValueOfBool) {
 		fmt.Println("theZeroValueOfBool is the opposite of not the zero value of bool")
 	}
 
