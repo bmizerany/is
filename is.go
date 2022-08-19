@@ -11,7 +11,7 @@ import "golang.org/x/exp/constraints"
 
 // Even returns true if n can even.
 func Even[I constraints.Integer](n I) bool {
-	return n%2 == 0
+	return Zero(n % 2)
 }
 
 // Odd returns false if n cannot even.
@@ -27,4 +27,9 @@ func True(b bool) bool {
 // False is a convenience function for not having to write !True(b).
 func False(b bool) bool {
 	return !True(b)
+}
+
+// Zero is a convenience function for checking if a number is 0
+func Zero[I constraints.Integer](n I) bool {
+	return n == 0
 }
