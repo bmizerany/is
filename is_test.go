@@ -8,15 +8,10 @@ import (
 
 func ExampleTrue() {
 	var theZeroValueOfBool bool
-	if is.True(!theZeroValueOfBool) {
+	if is.True(is.False(theZeroValueOfBool)) {
 		fmt.Println("theZeroValueOfBool is, in fact, the zero value of bool")
-	}
-
-	if is.False(theZeroValueOfBool) {
-		fmt.Println("theZeroValueOfBool is the opposite of not the zero value of bool")
 	}
 
 	// Output:
 	// theZeroValueOfBool is, in fact, the zero value of bool
-	// theZeroValueOfBool is the opposite of not the zero value of bool
 }
